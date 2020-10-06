@@ -1,0 +1,63 @@
+<%-- 
+    Document   : edit
+    Created on : 4/10/2020, 04:59:05 PM
+    Author     : Juan
+--%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
+        <!-- Optional theme-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">    
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <jsp:include page="menu.jsp"></jsp:include>
+        <h1 align="center">Hello World!</h1>
+        <div class="container well">
+            <div align="center">
+                <form action="AccountServlet?action=update" method="post">
+                    <table>
+                        <tr>
+                            <th><label><b>nameStudent:</b></label>
+                            <th>
+                                <input type="text" placeholder="Enter Username" class="form-control" name="nameStudent" required=""/>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th><label><b>Username:</b></label>
+                            <th>
+                                <input type="text" placeholder="Enter Username" class="form-control" name="username" required=""/>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th><label><b>Email:</b></label></th>
+                            <th>
+                                <input type="email" placeholder="Enter Email" class="form-control" name="email" required=""/>
+                            </th>
+                        </tr>
+                        <div class="break"></div>
+                        </div>
+                        <tr>
+                            <td colspan="2">
+                                <input class="btn icon-btn btn btn-info btn-lg" type="submit" name="action" 
+                                       value="Edit" style="margin-right: 20px;">
+                                <span class="glyphicon glyphicon-ok-sign"></span>
+                                <input class="btn icon-btn btn-lg" type="reset" name="action" value="Reset">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </td>
+                        </tr>
+                    </table>    
+                </form> 
+            </div>
+            <br>
+        </div>
+    </body>
+</html>
